@@ -1,5 +1,7 @@
 # Branch Off for Lichess
 
+![Right-clicking a move in a Lichess study and branching off a new study from that position](demo.gif)
+
 Right-click any move in a Lichess study and choose:
 
 - **➜ Continue in new study**: opens a new tab with a new study whose chapter starts from the position *after* that move.
