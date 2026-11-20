@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Branch Off for Lichess",
+  "version": "1.0.0",
+  "description": "Right-click a move in a Lichess study to branch off a new study from that position, keeping every later variation and comment.",
+  "content_scripts": [
+    {
+      "matches": ["https://lichess.org/study/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["core.js", "vendor/chess.js"],
+      "matches": ["https://lichess.org/*"]
+    }
+  ]
+}
