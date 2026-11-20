@@ -69,6 +69,9 @@
 
   async function run(target, action, win, winName) {
     try {
+      if (!chrome.runtime?.id) {
+        throw new Error('The extension was reloaded or updated since this page opened. Reload this page and try again.');
+      }
       const id = ids();
       if (!id) throw new Error('Could not tell which chapter is open. Open the chapter so its ID shows in the address bar, then try again.');
       const res = await fetch(`/study/${id.study}/${id.chapter}.pgn?clocks=false`, { credentials: 'same-origin' });
